@@ -1,91 +1,91 @@
 {
-    "carouselImages": [
-        "https://images.unsplash.com/photo-1624613533305-28d421d70875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxndWNjaSUyMHBlcmZ1bWUlMjBib3R0bGV8ZW58MXx8fHwxNzY5NTkyNTMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFuZWwlMjBwZXJmdW1lfGVufDF8fHx8MTc2OTU5MzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-        "https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc2OTQ4NjUyMXww&ixlib=rb-4.1.0&q=80&w=1080"
-    ],
-    "products": [
-        {
-            "id": 1,
-            "name": "Sauvage Eau de Toilette",
-            "brand": "Dior",
-            "price": 18500,
-            "originalPrice": 22000,
-            "image": "https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc2OTQ4NjUyMXww&ixlib=rb-4.1.0&q=80&w=1080",
-            "size": "100ML",
-            "onSale": true
-        },
-        {
-            "id": 2,
-            "name": "No. 5 Eau de Parfum",
-            "brand": "Chanel",
-            "price": 25000,
-            "originalPrice": 28000,
-            "image": "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFuZWwlMjBwZXJmdW1lfGVufDF8fHx8MTc2OTU5MzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-            "size": "100ML",
-            "onSale": true
-        }
-    ],
-    "sales": {
-        "title": "🚨 LIMITED TIME OFFER 🚨",
-        "subtitle": "FLAT 10% OFF on 100ML Original Perfumes",
-        "promo": "+ FREE DELIVERY on Advance Payment",
-        "features": [
-            {
-                "icon": "CheckCircle",
-                "title": "100% Original",
-                "desc": "Guaranteed Authentic Products"
-            },
-            {
-                "icon": "Sparkles",
-                "title": "Premium Packaging",
-                "desc": "Beautiful Gift-Ready Boxes"
-            },
-            {
-                "icon": "TruckIcon",
-                "title": "Nationwide Delivery",
-                "desc": "Delivery All Across Pakistan"
-            },
-            {
-                "icon": "Clock",
-                "title": "Limited Stock",
-                "desc": "Sale Duration: 1 Week Only"
-            }
-        ],
-        "brands": "🖤 Gucci • Chanel • MFK • Dior • Tom Ford • Versace • Prada • Armani & Many More",
-        "whatsapp": "923168657581"
+  "carouselImages": [
+    "https://images.unsplash.com/photo-1624613533305-28d421d70875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxndWNjaSUyMHBlcmZ1bWUlMjBib3R0bGV8ZW58MXx8fHwxNzY5NTkyNTMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFuZWwlMjBwZXJmdW1lfGVufDF8fHx8MTc2OTU5MzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc2OTQ4NjUyMXww&ixlib=rb-4.1.0&q=80&w=1080"
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Sauvage Eau de Toilette",
+      "brand": "Dior",
+      "price": 18500,
+      "originalPrice": 22000,
+      "image": "https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc2OTQ4NjUyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "size": "100ML",
+      "onSale": true
     },
-    "reviews": [
-        {
-            "id": 1,
-            "name": "Ahmed Khan",
-            "rating": 5,
-            "comment": "Absolutely authentic perfumes! Got my Dior Sauvage and it smells exactly like the original. Premium packaging and fast delivery.",
-            "date": "January 20, 2026"
-        },
-        {
-            "id": 2,
-            "name": "Fatima Ali",
-            "rating": 5,
-            "comment": "Best service in Karachi! Ordered Chanel No. 5, and the quality is outstanding. Highly recommend Style Organizers!",
-            "date": "January 18, 2026"
-        }
-    ],
-    "sizes": [
-        {
-            "label": "60g",
-            "price": 1500,
-            "desc": "Your perfect little luxury."
-        },
-        {
-            "label": "120g",
-            "price": 2400,
-            "desc": "Our beloved bestseller."
-        },
-        {
-            "label": "220g",
-            "price": 3600,
-            "desc": "The grand ambiance maker."
-        }
+    {
+      "id": 2,
+      "name": "No. 5 Eau de Parfum",
+      "brand": "Chanel",
+      "price": 25000,
+      "originalPrice": 28000,
+      "image": "https://images.unsplash.com/photo-1708733145706-82da0d0596e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFuZWwlMjBwZXJmdW1lfGVufDF8fHx8MTc2OTU5MzAzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "size": "100ML",
+      "onSale": true
+    }
+  ],
+  "sales": {
+    "title": "🚨 LIMITED TIME OFFER 🚨",
+    "subtitle": "FLAT 10% OFF on 100ML Original Perfumes",
+    "promo": "+ FREE DELIVERY on Advance Payment",
+    "brands": "",
+    "whatsapp": "923168657581",
+    "features": [
+      {
+        "icon": "CheckCircle",
+        "title": "100% Original",
+        "desc": "Guaranteed Authentic Products"
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Premium Packaging",
+        "desc": "Beautiful Gift-Ready Boxes"
+      },
+      {
+        "icon": "TruckIcon",
+        "title": "Nationwide Delivery",
+        "desc": "Delivery All Across Pakistan"
+      },
+      {
+        "icon": "Clock",
+        "title": "Limited Stock",
+        "desc": "Sale Duration: 1 Week Only"
+      }
     ]
+  },
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Ahmed Khan",
+      "rating": 5,
+      "comment": "Absolutely authentic perfumes! Got my Dior Sauvage and it smells exactly like the original. Premium packaging and fast delivery.",
+      "date": "January 20, 2026"
+    },
+    {
+      "id": 2,
+      "name": "Fatima Ali",
+      "rating": 5,
+      "comment": "Best service in Karachi! Ordered Chanel No. 5, and the quality is outstanding. Highly recommend Style Organizers!",
+      "date": "January 18, 2026"
+    }
+  ],
+  "sizes": [
+    {
+      "label": "60g",
+      "price": 1500,
+      "desc": "Your perfect little luxury."
+    },
+    {
+      "label": "120g",
+      "price": 2400,
+      "desc": "Our beloved bestseller."
+    },
+    {
+      "label": "220g",
+      "price": 3600,
+      "desc": "The grand ambiance maker."
+    }
+  ]
 }
