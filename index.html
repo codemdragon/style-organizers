@@ -135,10 +135,6 @@
       letter-spacing: 2px;
     }
 
-    .logo-image {
-      height: 40px;
-    }
-
     .logo span {
       color: var(--gold);
     }
@@ -392,7 +388,6 @@
       object-fit: contain;
       filter: drop-shadow(0 30px 60px rgba(190, 24, 93, 0.3));
       transition: transform 0.5s;
-      border-radius: 1.5rem;
     }
 
     .perfume-showcase:hover .perfume-bottle {
@@ -408,16 +403,16 @@
       animation: float 4s ease-in-out infinite;
     }
 
-    .floating-badge:nth-of-type(1) {
-        bottom: 20%;
-        left: -30px;
-        animation-delay: 2s;
+    .floating-badge:nth-child(2) {
+      top: 10%;
+      right: -20px;
+      animation-delay: 0s;
     }
 
-    .floating-badge:nth-of-type(2) {
-        top: 10%;
-        right: -20px;
-        animation-delay: 0s;
+    .floating-badge:nth-child(3) {
+      bottom: 20%;
+      left: -30px;
+      animation-delay: 2s;
     }
 
     .floating-badge i {
@@ -1377,12 +1372,6 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      .nav-links {
-        display: none;
-      }
-      .mobile-menu-toggle {
-        display: flex;
-      }
       .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1411,6 +1400,14 @@
     }
 
     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
       .search-box input {
         width: 150px;
       }
@@ -1455,17 +1452,6 @@
       .footer-bottom {
         flex-direction: column;
         text-align: center;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .product-grid {
-        grid-template-columns: 1fr;
       }
     }
 
@@ -1560,9 +1546,8 @@
 
   <!-- Header -->
   <header id="main-header">
-      <a href="#" class="logo">
-        <img src="logo.jpg" alt="Style Organizers Logo" class="logo-image">
-      </a>
+    <nav class="nav-container">
+      <a href="#" class="logo">STYLE <span>ORGANIZERS</span></a>
 
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
@@ -1620,12 +1605,12 @@
           <img src="" alt="Premium Perfume" class="perfume-bottle secondary animate-float"
             style="position: absolute; top:0; left:0; opacity:0;">
           <div class="floating-badge">
-            <i class="fas fa-truck"></i>
-            <span>Free Shipping</span>
-          </div>
-          <div class="floating-badge">
             <i class="fas fa-check-circle"></i>
             <span>100% Authentic</span>
+          </div>
+          <div class="floating-badge">
+            <i class="fas fa-truck"></i>
+            <span>Free Shipping</span>
           </div>
         </div>
       </div>
