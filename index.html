@@ -1314,7 +1314,7 @@
     .mobile-overlay {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       background: rgba(255, 255, 255, 0.98);
@@ -1323,12 +1323,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transform: translateY(-100%);
+      transform: translateX(100%);
       transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     }
 
     .mobile-overlay.active {
-      transform: translateY(0);
+      transform: translateX(0);
     }
 
     .mobile-close {
@@ -1601,7 +1601,9 @@
       <div class="hero-visual">
         <div class="perfume-showcase">
           <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=500" alt="Premium Perfume"
-            class="perfume-bottle animate-float">
+            class="perfume-bottle primary animate-float">
+          <img src="" alt="Premium Perfume" class="perfume-bottle secondary animate-float"
+            style="position: absolute; top:0; left:0; opacity:0;">
           <div class="floating-badge">
             <i class="fas fa-check-circle"></i>
             <span>100% Authentic</span>
@@ -1880,19 +1882,37 @@
 
     function startHeroRotation() {
       if (!storeData || !storeData.carouselImages || !storeData.carouselImages.length) return;
-      const bottle = document.querySelector('.perfume-bottle');
-      if (!bottle) return;
+      const primary = document.querySelector('.perfume-bottle.primary');
+      const secondary = document.querySelector('.perfume-bottle.secondary');
+      if (!primary || !secondary) return;
 
-      bottle.src = storeData.carouselImages[0];
+      primary.src = storeData.carouselImages[0];
 
       if (storeData.carouselImages.length > 1) {
         setInterval(() => {
-          currentHeroIndex = (currentHeroIndex + 1) % storeData.carouselImages.length;
-          bottle.style.opacity = 0;
+          let nextIndex = (currentHeroIndex + 1) % storeData.carouselImages.length;
+
+          // Prepare second image
+          secondary.src = storeData.carouselImages[nextIndex];
+
+          // Cross-fade
+          secondary.style.transition = 'opacity 1s ease-in-out';
+          primary.style.transition = 'opacity 1s ease-in-out';
+
+          secondary.style.opacity = 1;
+          primary.style.opacity = 0;
+
           setTimeout(() => {
-            bottle.src = storeData.carouselImages[currentHeroIndex];
-            bottle.style.opacity = 1;
-          }, 500);
+            // Swap roles for next time
+            primary.src = storeData.carouselImages[nextIndex];
+            primary.style.transition = 'none';
+            primary.style.opacity = 1;
+
+            secondary.style.transition = 'none';
+            secondary.style.opacity = 0;
+
+            currentHeroIndex = nextIndex;
+          }, 1000);
         }, 6000);
       }
     }
