@@ -1,133 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Organizers Admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #ec4899; 
+        :root {
+            --primary: #ec4899;
             --primary-dark: #db2777;
-            --bg: #fdf2f8; 
-            --white: #fff; 
-            --border: #f9a8d4; 
+            --bg: #fdf2f8;
+            --white: #fff;
+            --border: #f9a8d4;
             --text-dark: #1f2937;
             --text-light: #6b7280;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-dark); padding-bottom: 50px; }
-        
-        .navbar { 
-            background: var(--white); 
-            padding: 1rem 2rem; 
-            border-bottom: 1px solid var(--border); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            padding-bottom: 50px;
+        }
+
+        .navbar {
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
-        .navbar h2 { color: var(--primary); font-weight: 600; letter-spacing: -0.025em; }
-        
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-        
-        .card { 
-            background: var(--white); 
-            padding: 1.5rem; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
-            margin-bottom: 1.5rem; 
+
+        .navbar h2 {
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(249, 168, 212, 0.2);
         }
-        .card h3 { 
-            margin-bottom: 1.25rem; 
-            border-bottom: 3px solid var(--primary); 
-            display: inline-block; 
+
+        .card h3 {
+            margin-bottom: 1.25rem;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
             padding-bottom: 4px;
             font-size: 1.25rem;
             color: var(--text-dark);
         }
-        
-        .input-group { margin-bottom: 1rem; }
-        .input-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.875rem; color: var(--text-light); }
-        .input-group input, .input-group textarea, .input-group select { 
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #e5e7eb; 
-            border-radius: 8px; 
-            font-family: inherit;
-            transition: border-color 0.2s, ring 0.2s;
+
+        .input-group {
+            margin-bottom: 1rem;
         }
-        .input-group input:focus, .input-group textarea:focus {
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            ring: 2px solid var(--primary);
+            box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
         }
-        
-        .row { display: flex; gap: 1rem; }
-        .row .input-group { flex: 1; }
-        
-        button { 
-            padding: 12px 24px; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-weight: 600; 
+
+        .row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .row .input-group {
+            flex: 1;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
             transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
-        button:disabled { opacity: 0.5; cursor: not-allowed; }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
-        
-        .btn-sm { padding: 6px 12px; font-size: 0.875rem; }
-        .btn-del { background: #fee2e2; color: #ef4444; border: 1px solid #fecaca; }
-        .btn-del:hover { background: #fecaca; }
-        
-        .btn-add { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; margin-bottom: 1rem; }
-        .btn-add:hover { background: #bbf7d0; }
 
-        #login-screen { 
-            position: fixed; top:0; left:0; width:100%; height:100%; 
-            background: var(--bg); z-index: 999; display: flex; 
-            justify-content: center; align-items: center; 
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
-        .login-box { 
-            background: white; padding: 2.5rem; border-radius: 16px; 
-            width: 90%; max-width: 400px; text-align: center;
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 0.875rem;
+        }
+
+        .btn-del {
+            background: #fee2e2;
+            color: #ef4444;
+            border: 1px solid #fecaca;
+        }
+
+        .btn-del:hover {
+            background: #fecaca;
+        }
+
+        .btn-add {
+            background: #dcfce7;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+            margin-bottom: 1rem;
+        }
+
+        .btn-add:hover {
+            background: #bbf7d0;
+        }
+
+        #login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        .login-box h2 { color: var(--primary); margin-bottom: 0.5rem; }
-        
-        .item-list { list-style: none; }
-        .item-list li { 
-            background: #fff; 
-            border: 1px solid #f3f4f6; 
-            padding: 12px 16px; 
-            margin-bottom: 8px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+
+        .login-box h2 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-list {
+            list-style: none;
+        }
+
+        .item-list li {
+            background: #fff;
+            border: 1px solid #f3f4f6;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-radius: 8px;
             transition: transform 0.2s;
         }
-        .item-list li:hover { transform: translateX(4px); }
-        
-        .status { margin-top: 1rem; padding: 12px; border-radius: 8px; display: none; font-weight: 500; }
-        .status.success { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; display: block; }
-        .status.error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; display: block; }
+
+        .item-list li:hover {
+            transform: translateX(4px);
+        }
+
+        .status {
+            margin-top: 1rem;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .status.success {
+            background: #ecfdf5;
+            color: #059669;
+            border: 1px solid #a7f3d0;
+            display: block;
+        }
+
+        .status.error {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+            display: block;
+        }
 
         .img-preview-container {
             margin-top: 10px;
             position: relative;
             display: inline-block;
         }
+
         .img-preview {
             width: 100px;
             height: 100px;
@@ -136,14 +250,35 @@
             border: 1px solid var(--border);
         }
 
-        .tab-buttons { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
-        .tab-btn { background: #fff; color: var(--text-light); border: 1px solid #e5e7eb; flex: 1; }
-        .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .tab-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-        .section-content { display: none; }
-        .section-content.active { display: block; }
+        .tab-btn {
+            background: #fff;
+            color: var(--text-light);
+            border: 1px solid #e5e7eb;
+            flex: 1;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .section-content {
+            display: none;
+        }
+
+        .section-content.active {
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <div id="login-screen">
         <div class="login-box">
@@ -160,7 +295,8 @@
     <div id="admin-app" style="display:none;">
         <div class="navbar">
             <h2>Style Organizers Manager</h2>
-            <button onclick="logout()" style="background:transparent; color: var(--primary); border: 1px solid var(--primary);">Logout</button>
+            <button onclick="logout()"
+                style="background:transparent; color: var(--primary); border: 1px solid var(--primary);">Logout</button>
         </div>
 
         <div class="container">
@@ -193,9 +329,11 @@
                     <ul class="item-list" id="carousel-list"></ul>
                     <div class="input-group" style="margin-top:1.5rem;">
                         <label>Add New Slide</label>
-                        <input type="text" id="new-carousel-img" placeholder="Paste External Image URL" style="margin-bottom:10px;">
+                        <input type="text" id="new-carousel-img" placeholder="Paste External Image URL"
+                            style="margin-bottom:10px;">
                         <input type="file" id="new-carousel-file" accept="image/*">
-                        <button class="btn-primary btn-add" id="btn-add-carousel" onclick="addCarousel()" style="width:100%; margin-top:10px;">Add to Carousel</button>
+                        <button class="btn-primary btn-add" id="btn-add-carousel" onclick="addCarousel()"
+                            style="width:100%; margin-top:10px;">Add to Carousel</button>
                     </div>
                 </div>
             </div>
@@ -252,8 +390,10 @@
                     <div class="input-group">
                         <label><input type="checkbox" id="prod-onsale"> On Sale?</label>
                     </div>
-                    <button class="btn-primary" id="btn-save-product" onclick="saveProduct()" style="width:100%;">Create Product</button>
-                    <button class="btn-del" id="btn-cancel-product" onclick="resetProductForm()" style="width:100%; margin-top:8px; display:none;">Cancel Edit</button>
+                    <button class="btn-primary" id="btn-save-product" onclick="saveProduct()" style="width:100%;">Create
+                        Product</button>
+                    <button class="btn-del" id="btn-cancel-product" onclick="resetProductForm()"
+                        style="width:100%; margin-top:8px; display:none;">Cancel Edit</button>
                 </div>
             </div>
 
@@ -281,7 +421,12 @@
                         <label>WhatsApp Number (without +)</label>
                         <input type="text" id="sale-whatsapp">
                     </div>
-                    <button class="btn-primary" onclick="updateSales()" style="width:100%;">Update Sale Information</button>
+                    <div class="input-group">
+                        <label>Countdown End Date & Time</label>
+                        <input type="datetime-local" id="sale-end-date">
+                    </div>
+                    <button class="btn-primary" onclick="updateSales()" style="width:100%;">Update Sale
+                        Information</button>
                 </div>
             </div>
 
@@ -322,8 +467,10 @@
 
             <div class="card" style="border: 2px solid var(--primary); background: #fff5f8;">
                 <h3>Finalize & Publish</h3>
-                <p style="margin-bottom: 1rem; font-size: 0.875rem; color: #666;">This will commit all your changes directly to the GitHub repository. The website will update in moments.</p>
-                <button class="btn-primary" onclick="saveToGitHub()" style="background: #059669; width: 100%; font-size: 1.1rem;">🚀 Push to Live Website</button>
+                <p style="margin-bottom: 1rem; font-size: 0.875rem; color: #666;">This will commit all your changes
+                    directly to the GitHub repository. The website will update in moments.</p>
+                <button class="btn-primary" onclick="saveToGitHub()"
+                    style="background: #059669; width: 100%; font-size: 1.1rem;">🚀 Push to Live Website</button>
                 <div id="save-status" class="status"></div>
             </div>
         </div>
@@ -336,7 +483,7 @@
         let db = { carouselImages: [], products: [], sales: {}, reviews: [], sizes: [] };
         let editingProductIndex = null;
 
-        if(token) {
+        if (token) {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('admin-app').style.display = 'block';
             loadDb();
@@ -344,7 +491,7 @@
 
         function login() {
             const inputToken = document.getElementById('gh-token').value;
-            if(inputToken.startsWith('ghp_') || inputToken.startsWith('github_pat_')) {
+            if (inputToken.startsWith('ghp_') || inputToken.startsWith('github_pat_')) {
                 localStorage.setItem('style_gh_token', inputToken);
                 token = inputToken;
                 location.reload();
@@ -368,9 +515,9 @@
             const repo = document.getElementById('repo-name').value;
             // API_URL for db.json
             API_URL = `https://api.github.com/repos/${owner}/${repo}/contents/data/db.json`;
-            
+
             try {
-                const res = await fetch(API_URL, { 
+                const res = await fetch(API_URL, {
                     headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' },
                     cache: 'no-store'
                 });
@@ -378,19 +525,20 @@
                 const data = await res.json();
                 CURRENT_SHA = data.sha;
                 db = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-                
+
                 // Set initial values for Sales
-                if(db.sales) {
+                if (db.sales) {
                     document.getElementById('sale-title').value = db.sales.title || '';
                     document.getElementById('sale-subtitle').value = db.sales.subtitle || '';
                     document.getElementById('sale-promo').value = db.sales.promo || '';
                     document.getElementById('sale-brands').value = db.sales.brands || '';
                     document.getElementById('sale-whatsapp').value = db.sales.whatsapp || '';
+                    document.getElementById('sale-end-date').value = db.sales.endDate || '';
                 }
 
                 renderLists();
-            } catch (err) { 
-                alert("Error connecting to GitHub: " + err.message); 
+            } catch (err) {
+                alert("Error connecting to GitHub: " + err.message);
             }
         }
 
@@ -458,11 +606,11 @@
                             headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
                             body: JSON.stringify({ message: `Upload ${fileName}`, content })
                         });
-                        if(!res.ok) throw new Error("GitHub Upload Failed");
+                        if (!res.ok) throw new Error("GitHub Upload Failed");
                         const data = await res.json();
                         // Get the raw download URL instead of blob URL
                         resolve(`https://raw.githubusercontent.com/${owner}/${repo}/main/assets/${fileName}`);
-                    } catch(e) { reject(e); }
+                    } catch (e) { reject(e); }
                 };
                 reader.onerror = error => reject(error);
             });
@@ -472,18 +620,18 @@
             const btn = document.getElementById('btn-add-carousel');
             const fileInput = document.getElementById('new-carousel-file');
             let url = document.getElementById('new-carousel-img').value;
-            if(!url && fileInput.files.length === 0) return alert("URL or File required");
+            if (!url && fileInput.files.length === 0) return alert("URL or File required");
 
             try {
                 btn.disabled = true; btn.innerText = "Processing...";
                 const uploadedUrl = await uploadImage(fileInput, 'hero');
-                if(uploadedUrl) url = uploadedUrl;
-                
+                if (uploadedUrl) url = uploadedUrl;
+
                 db.carouselImages.push(url);
-                renderLists(); 
-                document.getElementById('new-carousel-img').value = ''; 
+                renderLists();
+                document.getElementById('new-carousel-img').value = '';
                 fileInput.value = '';
-            } catch(e) { alert(e.message); }
+            } catch (e) { alert(e.message); }
             finally { btn.disabled = false; btn.innerText = "Add to Carousel"; }
         }
 
@@ -500,11 +648,11 @@
             document.getElementById('prod-desc').value = p.description || '';
             document.getElementById('prod-img').value = p.image;
             document.getElementById('prod-onsale').checked = p.onSale;
-            
+
             const preview = document.getElementById('prod-img-preview');
             preview.src = p.image;
             document.getElementById('prod-img-preview-box').style.display = 'block';
-            
+
             document.getElementById('btn-save-product').innerText = "Update Product";
             document.getElementById('btn-cancel-product').style.display = 'block';
             switchTab('products');
@@ -524,14 +672,14 @@
             const onSale = document.getElementById('prod-onsale').checked;
             let image = document.getElementById('prod-img').value;
 
-            if(!id || !name) return alert("ID and Name are required");
+            if (!id || !name) return alert("ID and Name are required");
 
             try {
                 btn.disabled = true;
                 btn.innerText = "Processing...";
 
                 const uploadedUrl = await uploadImage(fileInput, `prod-${id}`);
-                if(uploadedUrl) image = uploadedUrl;
+                if (uploadedUrl) image = uploadedUrl;
 
                 const productData = { id, name, brand, price, originalPrice, image, size, onSale, description: desc };
 
@@ -543,7 +691,7 @@
 
                 renderLists();
                 resetProductForm();
-            } catch(e) {
+            } catch (e) {
                 alert(e.message);
             } finally {
                 btn.disabled = false;
@@ -571,6 +719,7 @@
                 promo: document.getElementById('sale-promo').value,
                 brands: document.getElementById('sale-brands').value,
                 whatsapp: document.getElementById('sale-whatsapp').value,
+                endDate: document.getElementById('sale-end-date').value,
                 features: db.sales.features // Keep features as is unless we want to add editing for them too
             };
             alert("Local changes saved. Don't forget to push to live!");
@@ -582,21 +731,21 @@
             const comment = document.getElementById('rev-comment').value;
             const date = document.getElementById('rev-date').value || new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-            if(!name || !comment) return alert("Name and Comment required");
+            if (!name || !comment) return alert("Name and Comment required");
 
             db.reviews.unshift({ id: Date.now(), name, rating, comment, date });
             renderLists();
-            
+
             document.getElementById('rev-name').value = '';
             document.getElementById('rev-comment').value = '';
             document.getElementById('rev-date').value = '';
         }
 
         function removeItem(type, index) {
-            if(confirm('Are you sure you want to delete this?')) {
-                if(type === 'carousel') db.carouselImages.splice(index, 1);
-                else if(type === 'product') db.products.splice(index, 1);
-                else if(type === 'review') db.reviews.splice(index, 1);
+            if (confirm('Are you sure you want to delete this?')) {
+                if (type === 'carousel') db.carouselImages.splice(index, 1);
+                else if (type === 'product') db.products.splice(index, 1);
+                else if (type === 'review') db.reviews.splice(index, 1);
                 renderLists();
             }
         }
@@ -604,7 +753,7 @@
         async function saveToGitHub() {
             const status = document.getElementById('save-status');
             status.className = 'status'; status.textContent = '⏳ Committing changes to GitHub...'; status.style.display = 'block';
-            
+
             try {
                 // Encode content to handle UTF-8 symbols (emojis, Urdu, etc)
                 const jsonStr = JSON.stringify(db, null, 2);
@@ -613,24 +762,24 @@
                 const res = await fetch(API_URL, {
                     method: 'PUT',
                     headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        message: "Update Store Content via Admin Panel", 
-                        content: base64Content, 
-                        sha: CURRENT_SHA 
+                    body: JSON.stringify({
+                        message: "Update Store Content via Admin Panel",
+                        content: base64Content,
+                        sha: CURRENT_SHA
                     })
                 });
-                
-                if(!res.ok) {
+
+                if (!res.ok) {
                     const error = await res.json();
                     throw new Error(error.message || 'Update Failed');
                 }
-                
+
                 const data = await res.json();
                 CURRENT_SHA = data.content.sha;
                 status.textContent = '✅ Success! Your website is being updated.'; status.classList.add('success');
                 setTimeout(() => { status.style.display = 'none'; }, 5000);
-            } catch (err) { 
-                status.textContent = '❌ Error: ' + err.message; status.classList.add('error'); 
+            } catch (err) {
+                status.textContent = '❌ Error: ' + err.message; status.classList.add('error');
             }
         }
 
@@ -645,4 +794,5 @@
         });
     </script>
 </body>
+
 </html>
